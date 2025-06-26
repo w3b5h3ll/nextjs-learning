@@ -98,3 +98,46 @@ You don't need to know exactly how React updates the UI to start using it, but i
 
 ## Chapter 05: Building UI with Components
 
+React core concepts
+- Components
+- Props
+- Sate
+
+UI被划分为更小的组件：Components
+- 可以将其理解为乐高积木
+
+![](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Flearn-components.png&w=1920&q=75)
+
+Component创建
+- 使用Javascript的function进行创建
+
+
+### Nesting components
+组件嵌套
+
+![](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Flearn-component-tree.png&w=1920&q=75)
+
+
+## Chapter 06: Displaying Data with Props
+目前为止，`<Header />`这个组件每次会呈现相同的内容
+
+React中使用`props`进行信息传递
+与 JavaScript 函数类似，您可以设计可接受自定义参数（或`props`）的组件，这些参数可改变组件的行为或在渲染到屏幕上时可视化显示的内容。然后，您可以将这些`props`从父组件传递给子组件。
+
+单向数据流
+> Note: In React, data flows down the component tree. This is referred to as one-way data flow. State, which will be discussed in the next chapter, can be passed from parent to child components as props.
+
+在 React 中，​​props（Properties 的缩写）​​ 是组件之间传递数据的核心机制，用于实现​​单向数据流​​。它允许父组件向子组件传递配置、状态或回调函数，使组件具备灵活性和可复用性。以下从多个角度深入理解 props：
+
+props 是父组件传递给子组件的​​只读参数​​，本质上是一个普通 JavaScript 对象（或类组件的 this.props 对象），包含子组件需要的所有外部数据。子组件通过 props 接收父组件的数据，但​​不能直接修改 props​​（React 强制保证单向数据流）。
+
+props 可以是任意 JavaScript 数据类型：
+
+- 基础类型（字符串、数字、布尔值等）
+- 对象、数组、函数（回调）
+- React 元素（如 `<Icon />` 组件实例）
+- null 或 undefined（需注意默认值处理）
+
+props 是 React 实现组件通信的核心机制，其核心特点是​​单向传递、只读、类型灵活​​。通过合理使用 props，开发者可以构建出高内聚、低耦合的可复用组件。结合 prop-types 类型校验和单向数据流原则，能有效提升代码的可维护性和稳定性。
+
+### Using variables in JSX
