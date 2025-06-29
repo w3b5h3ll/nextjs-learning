@@ -91,6 +91,19 @@ You don't need to know exactly how React updates the UI to start using it, but i
 ## // JavaScript Language 
 
 ### Fuctions and Arrow Functions
+函数
+```javascript
+function square(number)
+{
+    return number * number;
+}
+```
+
+
+函数表达式
+
+
+
 
 
 
