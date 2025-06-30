@@ -65,7 +65,7 @@ echo
 
 # 5. 推送到远程仓库
 echo "🚀 步骤 4/4: 正在推送到远程仓库..."
-git push
+git push origin HEAD
 echo "✅ 推送成功！"
 echo
 
