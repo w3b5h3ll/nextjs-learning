@@ -62,17 +62,19 @@ DOM: Document Object Model
 <mark>由此，引入了React，是一个流行的声明式库。React: A declarative UI library</mark>
 
 ## Chapter 04: Getting Started with React
+
 从外部引入scripts
+
 - react
 - react-dom
 
-
 ### JSX?
+
 JSX: a syntax extension for JavaScript that allows you to <mark>describe your UI</mark> in a familiar HTML-like syntax
 
 浏览器不能理解，所以需要一个JavaScript compiler
-- 将 JSX转为JavaScript
 
+- 将 JSX转为JavaScript
 
 And this is exactly what React does, it's a library that contains reusable snippets of code that perform tasks on your behalf - in this case, updating the UI.
 
@@ -84,60 +86,53 @@ You don't need to know exactly how React updates the UI to start using it, but i
 - [Writing markup with JSX](https://react.dev/learn/writing-markup-with-jsx)
 - [react-dom/server](https://react.dev/reference/react-dom/server) sections in the React Documentation.
 
-
-
-
-
-## // JavaScript Language 
+## // JavaScript Language
 
 ### Fuctions and Arrow Functions
+
 函数
+
 ```javascript
-function square(number)
-{
-    return number * number;
+function square(number) {
+  return number * number;
 }
 ```
 
-
 函数表达式
-
-
-
-
-
-
-
 
 ## Chapter 05: Building UI with Components
 
 React core concepts
+
 - Components
 - Props
 - Sate
 
 UI被划分为更小的组件：Components
+
 - 可以将其理解为乐高积木
 
 ![](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Flearn-components.png&w=1920&q=75)
 
 Component创建
+
 - 使用Javascript的function进行创建
 
-
 ### Nesting components
+
 组件嵌套
 
 ![](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Flearn-component-tree.png&w=1920&q=75)
 
-
 ## Chapter 06: Displaying Data with Props
+
 目前为止，`<Header />`这个组件每次会呈现相同的内容
 
 React中使用`props`进行信息传递
 与 JavaScript 函数类似，您可以设计可接受自定义参数（或`props`）的组件，这些参数可改变组件的行为或在渲染到屏幕上时可视化显示的内容。然后，您可以将这些`props`从父组件传递给子组件。
 
 单向数据流
+
 > Note: In React, data flows down the component tree. This is referred to as one-way data flow. State, which will be discussed in the next chapter, can be passed from parent to child components as props.
 
 在 React 中，​​props（Properties 的缩写）​​ 是组件之间传递数据的核心机制，用于实现​​单向数据流​​。它允许父组件向子组件传递配置、状态或回调函数，使组件具备灵活性和可复用性。以下从多个角度深入理解 props：

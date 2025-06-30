@@ -6,15 +6,15 @@ TypeScript
 
 项目结构说明
 
-- /app: all components 
+- /app: all components
 - /app/lib: functions(reusable utility functions )
 - /app/ui: UI components
 - /public: static assets
 - Config: next.config.ts
 
 ```bash
-┌───(c0r3dump@MacBook-Air)-[~/Works/nextjs-learning/nextjs_proj/nextjs-dashboard][mbair*] 
-└─$ tree -L 2      
+┌───(c0r3dump@MacBook-Air)-[~/Works/nextjs-learning/nextjs_proj/nextjs-dashboard][mbair*]
+└─$ tree -L 2
 .
 ├── app
 │   ├── layout.tsx
@@ -65,8 +65,6 @@ pnpm i
 pnpm dev
 ```
 
-
-
 ## Chapter 02: CSS Styling
 
 Tailwind
@@ -76,10 +74,6 @@ Tailwind
 使用`Tailwind`CSS框架进行快速CSS开发
 
 - Tailwind classes
-
-
-
-
 
 ### `clsx` library
 
@@ -104,10 +98,6 @@ export default function InvoiceStatus({ status }: { status: string }) {
 )}
 ```
 
-
-
-
-
 ## Chapter03: Optimizing Fonts and Images
 
 Why optimize fonts?
@@ -115,21 +105,15 @@ Why optimize fonts?
 - Fonts play a significant role in the design of a website
 - 浏览器初始用 fallback 字体或系统字体渲染文本，加载自定义字体后进行替换。**布局偏移的影响**：可能导致文本大小、间距或布局改变，使周围元素位置移动。
 
-
-
 Next.js会自动进行字体优化
 
 - `next/font` module
 
 - 在构建阶段下载并托管在static assets
 
-
-
 ### Adding a primary font
 
 So easy
-
-
 
 Why optimize images?
 
@@ -140,13 +124,9 @@ Why optimize images?
 - Lazy load
 - ...
 
-
-
 同样Next.js进行了自动优化
 
 - `next/image` module
-
-
 
 ### `<Image>`组件
 
@@ -154,8 +134,6 @@ Why optimize images?
 - Resizing images
 - Lazy loading
 - Support morden formats: WebP AVIF...
-
-
 
 ## Chapter 04: Creating Layouts and Pages
 
@@ -165,15 +143,7 @@ Why optimize images?
 
 > `page.tsx` is a special Next.js file that exports a React component, and it's required for the route to be accessible. In your application, you already have a page file: `/app/page.tsx` - this is the home page associated with the route `/`.
 
-
-
 只有`page`文件是可以公开访问的
-
-
-
-
-
-
 
 ### Creating the dashboard layout
 
@@ -181,16 +151,12 @@ Why optimize images?
 
 ![](https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fdark%2Fpartial-rendering-dashboard.png&w=3840&q=75)
 
-
-
 ### Root layout
 
 /app/layout.tsx
 
-- This is called a root layout and is required in every Next.js application 
-- Will be shared across all pages in your application 
-
-
+- This is called a root layout and is required in every Next.js application
+- Will be shared across all pages in your application
 
 ```mermaid
 graph LR
@@ -201,8 +167,6 @@ graph LR
   D --> D2[分析页]
 ```
 
-
-
 ## Chapter 05: Navigating Between Pages
 
 在不同的pages之间进行跳转
@@ -212,13 +176,20 @@ Why optimize navigation?
 - 传统方案：使用`<a>`标签
   - 但是每次都会导致页面的full page refresh
 
-
-
 `<Link>` component
 
-- In Next.js, `<Link>` allows you to do client-side navigation 
-
-
+- In Next.js, `<Link>` allows you to do client-side navigation
 
 ### Automatic code-splitting and prefetching
 
+Pattern: Showing active links
+
+当用户处于某个页面时，对应的导航链接应该高亮显示，以提示用户当前的位置
+
+- Hook: usePathname(),获取当前页面的URL
+
+## Chapter 06: Setting up Your Database
+
+PostgreSQL database
+
+- 开源关系型数据库
