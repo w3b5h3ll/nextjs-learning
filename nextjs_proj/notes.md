@@ -415,3 +415,7 @@ pnpm i use-debounce
 By debouncing, you can reduce the number of requests sent to your database, thus saving resources.
 
 ### Adding pagination
+
+Adding pagination allows users to navigate through the different pages to view all the invoices.
+
+- `fetchInvoicesPages` returns the total number of pages based on the search query.
